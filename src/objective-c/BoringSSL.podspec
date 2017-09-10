@@ -61,14 +61,14 @@ Pod::Spec.new do |s|
     Currently BoringSSL is the SSL library in Chrome/Chromium, Android (but it’s not part of the
     NDK) and a number of other apps/programs.
   DESC
-  s.homepage = 'https://boringssl.googlesource.com/boringssl/'
+  s.homepage = 'https://github.com/google/boringssl.git/'
   s.documentation_url = 'https://commondatastorage.googleapis.com/chromium-boringssl-docs/headers.html'
   s.license  = { :type => 'Mixed', :file => 'LICENSE' }
   # "The name and email addresses of the library maintainers, not the Podspec maintainer."
   s.authors  = 'Adam Langley', 'David Benjamin', 'Matt Braithwaite'
 
   s.source = {
-    :git => 'https://boringssl.googlesource.com/boringssl',
+    :git => 'https://github.com/google/boringssl.git',
     :tag => "version_for_cocoapods_#{version}",
   }
 
@@ -147,10 +147,10 @@ Pod::Spec.new do |s|
       #include "ssl.h"
       #include "crypto.h"
       #include "aes.h"
-      /* The following macros are defined by base.h. The latter is the first file included by the    
-         other headers. */    
-      #if defined(OPENSSL_ARM) || defined(OPENSSL_AARCH64)    
-      #  include "arm_arch.h"   
+      /* The following macros are defined by base.h. The latter is the first file included by the
+         other headers. */
+      #if defined(OPENSSL_ARM) || defined(OPENSSL_AARCH64)
+      #  include "arm_arch.h"
       #endif
       #include "asn1.h"
       #include "asn1_mac.h"
